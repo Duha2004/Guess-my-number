@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Guess My Number!</title>
+</head>
+
+<body>
+  <canvas id="confetti"></canvas>
+
+  <nav class="nav">
+    <span class="brand">Guess</span>
+    <button class="btn again">Play again</button>
+  </nav>
+
+  <section class="hero">
+    <div class="sticky">
+      <div class="orb"></div>
+      <h1>Guess<br />my number.</h1>
+      <p class="between">Between 1 and 20. Twenty points. Spend them wisely.</p>
+      <p class="hint">Scroll to play</p>
+    </div>
+  </section>
+
+  <main class="play">
+    <div class="bento">
+      <article class="card main reveal">
+        <div class="number">?</div>
+        <p class="message">Start guessing...</p>
+        <div class="controls">
+          <input type="number" class="guess" min="1" max="20" placeholder="1–20" />
+          <button class="btn check">Check</button>
+        </div>
+      </article>
+
+      <article class="card ringcard reveal">
+        <svg viewBox="0 0 120 120" class="ring" aria-hidden="true">
+          <circle cx="60" cy="60" r="52" class="track" />
+          <circle cx="60" cy="60" r="52" class="prog" />
+        </svg>
+        <p class="label-score">Score <span class="score">20</span></p>
+      </article>
+
+      <article class="card hs reveal">
+        <p class="label-highscore">Highscore <span class="highscore">0</span></p>
+      </article>
+
+      <article class="card tiles reveal">
+        <h2>Narrow it down.</h2>
+        <div class="range" aria-label="Possible numbers"></div>
+      </article>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
